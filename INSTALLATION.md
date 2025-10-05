@@ -13,7 +13,7 @@ Ouvre un terminal (cmd ou PowerShell) et tape :
 php -v
 ```
 
-- ✅ Si une version de PHP s’affiche, passe à l’étape suivante.  
+- ✅ Si une version de PHP s’affiche, passe à l’**étape 3**.  
 - ❌ Sinon, il faut ajouter PHP à la variable d’environnement **PATH**.
 
 ---
