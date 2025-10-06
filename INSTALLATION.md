@@ -1,7 +1,7 @@
-# 🧭 Installation de Symfony avec XAMPP (Windows)
+# :compass: Installation de Symfony
 
 Cette documentation détaille chaque étape nécessaire pour installer et configurer **Symfony** sur **Windows**, lorsque **XAMPP** est déjà installé.  
-> 💡 Si PHP n’est pas installé, télécharge-le au préalable sur le site officiel.
+> :bulb: Si PHP n’est pas installé, télécharge-le au préalable sur le [Site officiel](https://www.windows.php.net/download/).
 
 ---
 
@@ -13,8 +13,8 @@ Ouvre un terminal (cmd ou PowerShell) et tape :
 php -v
 ```
 
-- ✅ Si une version de PHP s’affiche, passe à l’**étape 3**.  
-- ❌ Sinon, il faut ajouter PHP à la variable d’environnement **PATH**.
+- :white_check_mark: Si une version de PHP s’affiche, passe à l’**étape 3**.  
+- :x: Sinon, il faut ajouter PHP à la variable d’environnement **PATH**.
 
 ---
 
@@ -49,7 +49,7 @@ php -v
 
 Scoop est un gestionnaire de paquets pratique pour Windows, qui simplifie l’installation d’outils en ligne de commande.
 
-Ouvre **PowerShell en mode administrateur** et exécute :
+Ouvre **PowerShell en mode administrateur** (sans être admin ça fonctionne aussi parfois) et exécute :
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -67,7 +67,8 @@ scoop --version
 ## 4. Installer Composer
 
 Composer est le **gestionnaire de dépendances PHP** utilisé par Symfony.  
-Télécharge-le ici : 👉 [https://getcomposer.org/download/](https://getcomposer.org/download/)
+Télécharge-le ici : :point_right: [Composer](https://getcomposer.org/download/)
+:warning: Lancer l'installation via le  `Composer-Setup.exe` téléchargeable sur la page.
 
 Pendant l’installation :
 1. Indique le chemin de PHP :  
@@ -77,7 +78,7 @@ Pendant l’installation :
 2. Laisse les options par défaut et termine l’installation
 3. Vérifie ensuite :
    ```bash
-   composer -V
+   composer -v
    ```
 
 ---
@@ -86,7 +87,7 @@ Pendant l’installation :
 
 Le **Symfony CLI** facilite la création et la gestion des projets.
 
-Télécharge-le ici : 👉 [https://symfony.com/download](https://symfony.com/download)
+Télécharge-le ici : :point_right: [Symphony](https://symfony.com/download)
 
 Ou installe-le via Scoop :
 ```bash
@@ -126,7 +127,7 @@ Certaines extensions doivent être activées pour que Symfony fonctionne correct
    extension=mbstring
    extension=zip
    ```
-4. Sauvegarde et redémarre **Apache** depuis le panneau XAMPP.
+4. Sauvegarde
 
 Vérifie ensuite :
 ```bash
@@ -163,24 +164,5 @@ Teste la commande suivante dans ton projet :
 ```bash
 php bin/console
 ```
-
-✅ Si la liste des commandes Symfony s’affiche, ton environnement est prêt à l’emploi !
-
----
-
-## 🎉 Résumé rapide
-
-| Étape | Objectif |
-|-------|-----------|
-| 1 | Vérifier PHP |
-| 2 | Ajouter PHP au PATH |
-| 3 | (Optionnel) Installer Scoop |
-| 4 | Installer Composer |
-| 5 | Installer Symfony CLI |
-| 6 | Activer les extensions PHP |
-| 7 | Créer le projet Symfony |
-| 8 | Vérifier le bon fonctionnement |
-
----
-
-> 🧑‍💻 Tu peux désormais commencer ton développement Symfony directement dans ton dossier `C:\xampp\htdocs` ou celui de ton choix !
+Lancé le serveur local via l'ip donné dans l'encadré vert après avoir fait la commande `symfony serve`
+:white_check_mark: Si la liste des commandes Symfony s’affiche et que tu vois la page de test de symfony, ton environnement est prêt à l’emploi !
